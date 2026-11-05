@@ -236,7 +236,8 @@ html.intro-done .intro { display: none; }
 }
 .intro.is-open .intro-content { opacity: 0; transform: scale(0.96); }
 
-.intro-capsule { width: min(240px, 52vw); transform: rotate(-28deg); overflow: visible; }
+.intro-capsule { width: min(220px, 50vw); overflow: visible; }
+.intro-cap-slot { stroke: #eff6ff; }
 .intro-cap-line { stroke: #93c5fd; stroke-width: 3.2; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 100; animation: introDraw 1s cubic-bezier(0.65, 0, 0.35, 1) 0.15s forwards; }
 .intro-cap-mid { stroke: #93c5fd; stroke-width: 2.6; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 100; animation: introDraw 0.5s ease 0.85s forwards; }
 .intro-cap-fill-left { fill: #3b82f6; opacity: 0; animation: introFill 0.5s ease 1.05s forwards; }

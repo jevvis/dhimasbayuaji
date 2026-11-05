@@ -4,13 +4,13 @@ import { useEffect, useRef } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 /**
- * Layar pembuka: kapsul tergambar garis demi garis, nama muncul, lalu layar terbelah ke atas-bawah
+ * Layar pembuka: kotak suara tergambar garis demi garis, nama muncul, lalu layar terbelah ke atas-bawah
  * dan hero terungkap bertahap (lihat .hero-anim di globals.css).
  * - Tampil di setiap muat ulang dan kunjungan baru; dilewati hanya bila datang dari halaman lain di situs ini (skrip di <head> di layout.tsx menyembunyikannya sebelum cat pertama).
  * - Bisa dilewati: klik, Esc, atau Enter.
  * - Pengaman: bila JavaScript gagal, CSS menyembunyikan layar ini sendiri setelah beberapa detik.
  */
-const OPEN_AT_MS = 1900 // kapan layar mulai terbelah (setelah kapsul + nama selesai)
+const OPEN_AT_MS = 1900 // kapan layar mulai terbelah (setelah kotak suara + nama selesai)
 const HERO_AFTER_MS = 200 // hero mulai terungkap sesaat setelah layar mulai terbelah
 const DONE_AFTER_MS = 1100 // layar disembunyikan setelah animasi belah selesai
 
@@ -66,11 +66,14 @@ export default function Intro() {
       <div className="intro-panel intro-bottom" />
 
       <div className="intro-content">
-        <svg className="intro-capsule" viewBox="0 0 160 80" fill="none" aria-hidden="true">
-          <path className="intro-cap-fill-left" d="M80 6H40a34 34 0 0 0 0 68h40z" />
-          <path className="intro-cap-fill-right" d="M80 6h40a34 34 0 0 1 0 68H80z" />
-          <rect className="intro-cap-line" x="6" y="6" width="148" height="68" rx="34" pathLength="100" />
-          <path className="intro-cap-mid" d="M80 6v68" pathLength="100" />
+        <svg className="intro-capsule" viewBox="0 0 160 124" fill="none" aria-hidden="true">
+          {/* kotak suara (ilmu politik): kertas suara dengan centang masuk ke kotak */}
+          <rect className="intro-cap-fill-right" x="56" y="6" width="48" height="56" rx="5" />
+          <path className="intro-cap-mid" d="M56 60V11a5 5 0 0 1 5-5h38a5 5 0 0 1 5 5v49" pathLength="100" />
+          <path className="intro-cap-mid" d="M69 32l8 8 15-17" pathLength="100" />
+          <rect className="intro-cap-fill-left" x="22" y="56" width="116" height="62" rx="8" />
+          <rect className="intro-cap-line" x="22" y="56" width="116" height="62" rx="8" pathLength="100" />
+          <path className="intro-cap-mid intro-cap-slot" d="M52 74h56" pathLength="100" />
         </svg>
         <p className="intro-name">Dhimas Bayu Aji</p>
         <p className="intro-role">SALES & SALES SUPPORT</p>
