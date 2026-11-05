@@ -53,7 +53,7 @@ export default function AcademicOrg() {
 
         {groups.map((group, gIdx) => (
           <div key={group.labelKey} className={gIdx > 0 ? 'mt-24' : ''}>
-            <p className="text-[10px] tracking-[0.3em] uppercase text-emerald-500 mb-10 font-semibold">{t(group.labelKey)}</p>
+            <p className="text-[10px] tracking-[0.3em] uppercase text-blue-500 mb-10 font-semibold">{t(group.labelKey)}</p>
             <div className="flex flex-col gap-20 lg:gap-28">
               {group.items.map((item) => {
                 const left = row++ % 2 === 1
@@ -64,13 +64,13 @@ export default function AcademicOrg() {
                   >
                     <div className="w-full lg:w-1/2 flex flex-col">
                       <div className="flex items-center gap-3 mb-3">
-                        <span className="text-xs font-bold px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+                        <span className="text-xs font-bold px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-500 border border-blue-500/20">
                           0{item.n}
                         </span>
                         <span className="text-[11px] tracking-widest text-[var(--muted)] uppercase font-semibold">{t(`org.${item.n}.period`)}</span>
                       </div>
                       <h3 className="text-2xl md:text-3xl font-bold text-[var(--foreground)] mb-1">{t(`org.${item.n}.inst`)}</h3>
-                      <h4 className="text-lg md:text-xl font-semibold text-emerald-500 mb-2">{t(`org.${item.n}.role`)}</h4>
+                      <h4 className="text-lg md:text-xl font-semibold text-blue-500 mb-2">{t(`org.${item.n}.role`)}</h4>
                       <p className="text-xs md:text-sm font-semibold text-[var(--muted)] mb-5">{t(`org.${item.n}.sub`)}</p>
                       <p className="text-[var(--muted)] text-sm leading-relaxed mb-6 text-justify">{t(`org.${item.n}.desc`)}</p>
                       <div className="flex flex-wrap gap-2">
