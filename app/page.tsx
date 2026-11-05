@@ -4,7 +4,6 @@ import WorkGallery from '@/components/WorkGallery'
 import {
   AboutSection,
   EducationSection,
-  RolesSection,
   AwardsSection,
   SkillsSection,
   PersonalSkillsSection,
@@ -22,9 +21,6 @@ export default function Home() {
       <Hero />
       <FadeInSection>
         <AboutSection />
-      </FadeInSection>
-      <FadeInSection>
-        <RolesSection />
       </FadeInSection>
       <FadeInSection>
         <EducationSection />

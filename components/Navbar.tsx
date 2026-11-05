@@ -7,7 +7,6 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const mainLinkKeys = [
   { key: 'nav.about', id: 'about', href: '/#about' },
-  { key: 'nav.roles', id: 'roles', href: '/#roles' },
   { key: 'nav.education', id: 'education', href: '/#education' },
   { key: 'nav.work', id: 'work', href: '/#work' },
   { key: 'nav.org', id: 'trainings', href: '/#trainings' },
